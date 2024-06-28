@@ -102,6 +102,10 @@ def write_plantuml_file(context):
                     "post_" + str(post["post_id"]) +
                     " : reported_by = " + post["reported_by"] + "\n"
                 )
+            
+            # nameOfNodeOne -> nameOfNodeTwo
+            pf.write(context["username"] + " -down-> " +
+                     "post_" + str(post["post_id"]) + "\n")
 
         pf.write("@enduml \n")
 
